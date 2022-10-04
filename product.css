@@ -1,0 +1,44 @@
+*{
+    border: 0;
+
+}
+body{
+    height: 100vh;
+    background-image: linear-gradient(90deg, #151a72 ,#aa00aa);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container{
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+    border-radius: 50px;
+    padding: 40px;
+    margin: 10px;
+    width: 40%;
+}
+span{
+    font-size: large;
+}
+input{
+    display: block;
+    width: 100%;
+    padding: 6px 6px;
+    border:1px solid #0a0a0a;
+    border-radius: 20px;
+}
+.submit{
+    text-align: center;
+    width: 40%;
+    font-size: larger;
+    padding: 6px 5px;
+    background-color: rgb(230, 0, 0);
+    color: #fff;
+    border-radius: 10px;
+}
+#msg{
+    text-align: center;
+    font-size: large;
+    color: #fff;
+    font-family: sans-serif;
+}

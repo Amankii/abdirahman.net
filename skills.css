@@ -1,0 +1,59 @@
+
+
+body{
+    margin: 15%;
+    background-color: rgb(0, 38, 53);
+    background-image: url(images1/skills.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    font: 2em sans-serif;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    height: 100vh;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    font: 25px sans-serif;
+}
+
+span{
+    color: orange;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font: 2em;
+}
+
+h1{
+    background-color: none;
+    color: #fff;
+    font-family:'Courier New', Courier, monospace;
+    letter-spacing: 3px;
+    border-radius: 50px;
+    border-style:ridge;
+    box-shadow: 4px 4px 6px rgb(37, 37, 37);
+    margin: auto 50px auto 50px;
+    -webkit-text-stroke: #333 2px;
+
+}
+
+.skills{
+    background-color: none;
+    color: #fff;
+    border: orange 5px solid;
+    border-radius: 35px;
+    box-shadow: 2px 2px 3px #333,
+    -2px -2px 3px rgb(83, 83, 83);
+    border-style:dotted;
+    text-shadow: 2px 2px 3px #333;
+}
+@media only screen and (max-width:600px){
+    h1{
+        font-size: larger;
+
+    }
+}

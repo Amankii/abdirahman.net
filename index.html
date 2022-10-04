@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YA Yasirr</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/8fed5660fa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images1/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="https://www.youtube.com/channel/UCnbvBZI2IufArUxEJ9m6kzQ">Home</a></li>
+                    <li><a href="https://www.instagram.com/its_abdirahman_2534/">service</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.3.html">Product</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Editor Pro Max</p>
+                <h1>Hi, I'm <span>Abdirahman</span> <br>Yahye from Kenya.</h1>
+            </div>
+        </div>
+    </div>
+<!-----------------about----------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images1/about.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae repellendus nemo porro? Labore 
+                        reiciendis possimus dolorem dignissimos blanditiis veritatis maiores perferendis placeat
+                        et magnam deserunt itaque, sequi nostrum iste amet?
+                    </p>
+                    <div class="tab-titles">
+                        <li class="tab-links"><a href="index.skills.html">Skills</a></li>
+                        <li class="tab-links"><a href="index.exp.html">Experience</a></li>
+                        <li class="tab-links"><a href="index.educ.html">Education</a></li>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<!----------------------------Contact-------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-message"></i>yahye@yahoo.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+1653468653</p>
+                    <div class="social-icon">
+                        <a href="https://www.youtube.com/channel/UCnbvBZI2IufArUxEJ9m6kzQ"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://twitter.com/EditzAbdirahman"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/its_abdirahman_2534/"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://www.facebook.com/abdirahman.yahye.16"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.tiktok.com/@abdirahmaneditzpro?_t=8UhEYkeZ1mw&_r=1"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                    <div class="download-send"><a href="images1/Reclaimed by Nature Logo AY_free.mp4" download>Download</a></div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Fast Name" placeholder="Fast Name" required>
+                        <input type="text" name="Last Name" placeholder="Last Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="4" placeholder="Message"></textarea>
+                        <button class="download-send submit">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="copyright">
+        <p>Copyright &copy; 2022,<img src="images1/logo2.png" alt=""><strong> Its me Abdirahman Yahyaa.</strong></p>
+    </div>
+
+
+
+<script src="app.js"></script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzfTSbP1EM3x4xrjmaRREX-y6g1LLFAmzh-Z2RVeWe5T09lWfGR2v6d8zS9WmCrAfFF/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg =document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML= "Message sent succesfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+  <script>
+
+    var sidemenu = document.getElementById('sidemenu')
+
+    function openmenu(){
+        sidemenu.style.right = "0"
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-500px"
+    }
+
+
+  </script>
+
+</body>
+</html>
